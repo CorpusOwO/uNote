@@ -4,9 +4,9 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 flex items-start">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="w-20" />
+                        <x-application-logotipe />
                     </a>
                 </div>
 
@@ -14,6 +14,11 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('note-index')" :active="request()->routeIs('note-index')">
+                        {{ __('Notes') }}
                     </x-nav-link>
                 </div>
             </div>
